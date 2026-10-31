@@ -1,6 +1,6 @@
-package eu.sipria.inject.akka
+package eu.sipria.inject.pekko
 
-import akka.actor.{Actor, ActorContext, ActorRef, Props}
+import org.apache.pekko.actor.{Actor, ActorContext, ActorRef, Props}
 
 trait InjectedActorSupport {
 

@@ -1,9 +1,9 @@
-package eu.sipria.inject.akka.pong
+package eu.sipria.inject.pekko.pong
 
 import javax.inject.{Inject, Named}
 
-import akka.actor.Actor
 import com.google.inject.assistedinject.Assisted
+import org.apache.pekko.actor.Actor
 
 class Pong @Inject() (@Named("named.secret") secret: String, @Assisted public: String) extends Actor {
 
