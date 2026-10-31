@@ -1,20 +1,19 @@
-package eu.sipria.inject.akka
+package eu.sipria.inject.pekko
 
 import java.lang.reflect.Method
-import javax.inject.Provider
 
-import akka.actor.{Actor, ActorRef, Props}
-import com.google.inject.{AbstractModule, Binder}
 import com.google.inject.assistedinject.FactoryModuleBuilder
 import com.google.inject.name.Names
+import com.google.inject.{AbstractModule, Binder, Provider}
+import org.apache.pekko.actor.{Actor, ActorRef, Props}
 
 import scala.reflect.ClassTag
 
-trait AkkaModuleSupport { _: AbstractModule =>
+trait PekkoModuleSupport { this: AbstractModule =>
 
   private def binder: Binder = {
     val method: Method = classOf[AbstractModule].getDeclaredMethod("binder")
-    if (!method.isAccessible) {
+    if (!method.canAccess(this)) {
       method.setAccessible(true)
     }
     method.invoke(this).asInstanceOf[Binder]

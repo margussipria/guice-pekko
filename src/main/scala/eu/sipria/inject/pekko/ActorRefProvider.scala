@@ -1,9 +1,7 @@
-package eu.sipria.inject.akka
+package eu.sipria.inject.pekko
 
-import javax.inject.{Inject, Provider}
-
-import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import com.google.inject.Injector
+import com.google.inject.{Inject, Injector, Provider}
+import org.apache.pekko.actor.{Actor, ActorRef, ActorSystem, Props}
 
 import scala.reflect.ClassTag
 
