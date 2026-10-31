@@ -1,7 +1,7 @@
 name := "guice-pekko"
 description := "Library for injecting Apache Pekko actors with Google Guice"
 
-homepage := Some(new URL("https://github.com/margussipria/guice-pekko"))
+homepage := Some(url("https://github.com/margussipria/guice-pekko"))
 licenses := Seq("Apache License, Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0.txt"))
 
 organization := "eu.sipria.inject.pekko"
